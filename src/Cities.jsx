@@ -5,9 +5,9 @@ import isEmpty from 'lodash/isEmpty';
 class Cities extends React.Component {
     constructor(){
         super();
-        this.state={
+        this.state = {
             selectedCity: "",
-            cities:['Hyderabad', 'Mumbai', 'Chennai', 'Nizamabad', 'Warangal']
+            cities: []
         }
     }
 
@@ -25,9 +25,21 @@ class Cities extends React.Component {
         console.log(option);
         console.log(this.state.cities);
     }
-
+    addCities = (data) => {
+        this.setState({
+            cities: data
+        })
+    }
+    componentDidMount() {
+        fetch("https://my-json-server.typicode.com/prashu851/demo/cities")
+        .then((data) => data.json())
+        .then(this.addCities)
+    }
     render(){
         const { selectedCity, cities } = this.state;
+        if (isEmpty(cities)) {
+            return <></>
+        }
         return(
             <DropDown 
                 label={isEmpty(selectedCity) ? "Select City": selectedCity }

@@ -7,7 +7,7 @@ class Countries extends React.Component {
         super();
         this.state={
             selectedCountry: "",
-            countries:['India','Australia','Newzealand','England','South Africa','USA','Russia','China','Japan','Germany']
+            countries: []
         }
     }
 
@@ -26,8 +26,23 @@ class Countries extends React.Component {
         console.log(this.state.countries)
     }
 
+    addCountries = (data) => {
+        this.setState({
+            countries: data
+        })
+    }
+
+    componentDidMount() {
+        fetch("https://my-json-server.typicode.com/prashu851/demo/countries")
+        .then((data) => data.json())
+        .then(this.addCountries)
+    }
+
     render(){
         const { selectedCountry, countries } = this.state;
+        if (isEmpty(countries)) {
+            return <></>;
+        }
         return(
             <DropDown 
                 label={isEmpty(selectedCountry) ? "Select Location": selectedCountry }
