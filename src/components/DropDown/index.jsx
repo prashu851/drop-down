@@ -1,7 +1,7 @@
 import React from 'react'
-import './DropDown.css'
 import DropDownItems from './DropDownItems'
 import DropDownButton from './DropDownButton';
+import './index.css';
 
 class DropDown extends React.Component {
     constructor(){

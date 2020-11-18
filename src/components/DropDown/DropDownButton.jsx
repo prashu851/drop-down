@@ -1,6 +1,6 @@
 import { Class } from '@material-ui/icons';
 import React from 'react'
-import DropDown from './DropDown';
+import DropDown from '.';
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './DropDownButton.css'
