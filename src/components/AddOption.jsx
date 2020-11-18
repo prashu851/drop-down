@@ -5,7 +5,8 @@ const AddOption = ({searchTerm, canCreateOption, addNewOption}) => {
     return(
         <div className="add-option-div">
             "{searchTerm}" not found
-            {canCreateOption && <button className="add-btn" onClick={()=>addNewOption(searchTerm)}>Add & Select</button>}
+            {canCreateOption && 
+            <button className="add-btn" onClick={()=>addNewOption(searchTerm)}>Add & Select</button>}
         </div>
     )
 }

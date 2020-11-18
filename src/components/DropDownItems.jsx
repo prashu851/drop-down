@@ -45,13 +45,16 @@ class DropDownItems extends React.Component {
             return visibleOptions.map((option,index) =>
             <>
                 <div className="dropdown-items" key={index} onClick={() => handleOptionSelect(option)}>
-                    {option}
-                    
+                    {option}  
                 </div>
                 {(index === visibleOptions.length - 1) && (hiddenOptions > 0) 
-                    ? <button className="show-more-btn" onClick={this.updateShowAllOptions}>{hiddenOptions} more</button>
+                    ? <button 
+                        className="show-more-btn"
+                        onClick={this.updateShowAllOptions}
+                        >{hiddenOptions} more
+                      </button>
                     : ''
-                    }
+                }
             </>
             );
         }

@@ -7,18 +7,18 @@ import './DropDownButton.css'
 
 const DropDownButton = ({label, handleDropDownClick}) => {
     return(
-            <div className="dropdown-btn">
-                <Button
-                    variant="contained"
-                    color="default"
-                    endIcon={<ExpandMoreIcon />}
-                    className="select-btn"
-                    onClick={handleDropDownClick}
-                    disableFocusRipple
-                >
-                    {label}
-                </Button>
-            </div>
+        <div className="dropdown-btn">
+            <Button
+                variant="contained"
+                color="default"
+                endIcon={<ExpandMoreIcon />}
+                className="select-btn"
+                onClick={handleDropDownClick}
+                disableFocusRipple
+            >
+                {label}
+            </Button>
+        </div>
     )
 }
 
