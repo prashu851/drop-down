@@ -10,7 +10,7 @@ class DropDown extends React.Component {
             showDropDownItems: false
         }
         this.toggleDropDown = this.toggleDropDown.bind(this);
-        this.onSelectItem = this.onSelectItem.bind(this);
+        this.onSelectOption = this.onSelectOption.bind(this);
         this.hideDropDownItems = this.hideDropDownItems.bind(this);
     }
     toggleDropDown = () => {
