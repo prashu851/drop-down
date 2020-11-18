@@ -3,7 +3,7 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import './Box.css'
 
-class Box extends React.Component {
+class DropDownItems extends React.Component {
     constructor(){
         super();
         this.state={
@@ -17,10 +17,11 @@ class Box extends React.Component {
         })
     }
     render(){
-        const { searchTerm } = this.state
-        const filteredCountries = this.props.countries.filter(country => {
-            return country.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
-          });
+        const { searchTerm } = this.state;
+        const { handleOptionSelect, options } = this.props
+        const filteredOptions = options.filter(option => {
+            return option.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+        });
         return(
             <div className="dropdown-box">
                 <div className="dropdown-items">
@@ -31,9 +32,9 @@ class Box extends React.Component {
                         onChange={this.handleFilter}
                     />                    
                 </div>
-                {filteredCountries.map((country,index)=>
-                <div className="dropdown-items" key={index} onClick={()=>console.log(country)}>
-                    {country}
+                {filteredOptions.map((option,index)=>
+                <div className="dropdown-items" key={index} onClick={() => handleOptionSelect(option)}>
+                    {option}
                 </div>
                 )}
             </div>
@@ -41,4 +42,4 @@ class Box extends React.Component {
     }
 }
 
-export default Box;
+export default DropDownItems;
