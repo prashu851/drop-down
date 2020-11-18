@@ -16,7 +16,7 @@ The page will reload if you make edits.\
 
 
 
-Problem and Solution:
+## Problem and Solution:
 
 DropDown is a generic component that can be used by parent to use dropdown feature. In the example I have used dropdown for showing `Countries and Cities`.
 ```
@@ -34,11 +34,11 @@ DropDown is a generic component that can be used by parent to use dropdown featu
 
 `options` -> List of dropdown options available
 
-`onOptionChange` -> Callback when user selects a dropdown option
+`onOptionChange` -> Callback function when user selects a dropdown option
 
 `maximumDisplayOptions` -> Maximum number of items visible in the dropdown menu
 
-`addNewOption` -> Callback when user creates/adds a new dropdown option
+`addNewOption` -> Callback function when user creates/adds a new dropdown option
 
 `canCreateOption` -> This is flag to give permission for a user to Create/Add new option. 
 
