@@ -1,0 +1,13 @@
+.add-option-div{
+    padding:10px 20px
+}
+.add-btn{
+    float: right;
+    height:2rem;
+    background-color: #2c497f;
+    color:white;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

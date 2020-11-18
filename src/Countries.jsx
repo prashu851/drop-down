@@ -17,6 +17,14 @@ class Countries extends React.Component {
         });
         console.log(country);
     }
+    addNewOption = (option) => {
+        this.setState({
+            countries:[...this.state.countries,option],
+            selectedCountry:option
+        })
+        console.log(option)
+        console.log(this.state.countries)
+    }
 
     render(){
         const { selectedCountry, countries } = this.state;
@@ -25,10 +33,12 @@ class Countries extends React.Component {
                 label={isEmpty(selectedCountry) ? "Select Location": selectedCountry }
                 options={countries}
                 onOptionChange={this.onCountryChange}
+                maximumDisplayOptions={5}
+                addNewOption={this.addNewOption}
+                canCreateOption={true}
             />
         )
     }
-
 }
 
 export default Countries;

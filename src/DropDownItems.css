@@ -5,13 +5,13 @@
     display: flex;
     flex-direction: column;
     width:21rem;
-    height:250px;
+    height:16rem;
     overflow: auto;
     background:white;
     border-radius: 10px;
     padding-bottom: 0.5rem;
-    margin: 0 auto;
     margin-top: 1rem;
+    box-shadow:0 16px 16px rgba(0,0,0,0.15);
 }
 .dropdown-items{
     display: flex;
@@ -20,9 +20,22 @@
 
 }
 .dropdown-items:hover{
-    background-color: #d6fff6;
+    background-color: #d8def1;
+    cursor: pointer;
+}
+.search-input:hover{
+    background-color: white;
 }
 .search-icon{
     height:100%;
     padding-top: 2px;
+}
+.show-more-btn{
+    width:100%;
+    padding:10px 20px;
+    border:none;
+    outline: none;
+    background-color: #5995ed;
+    color:white;
+    border-radius: 5px;
 }

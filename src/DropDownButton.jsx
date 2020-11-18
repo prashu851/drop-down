@@ -14,6 +14,7 @@ const DropDownButton = ({label, handleDropDownClick}) => {
                     endIcon={<ExpandMoreIcon />}
                     className="select-btn"
                     onClick={handleDropDownClick}
+                    disableFocusRipple
                 >
                     {label}
                 </Button>

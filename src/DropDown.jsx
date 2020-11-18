@@ -25,13 +25,13 @@ class DropDown extends React.Component {
         this.props.onOptionChange(selectedItem);
     }
     render(){
-        const { options, label } = this.props;
+        const { options, label, maximumDisplayOptions, canCreateOption } = this.props;
         const { showDropDownItems } = this.state; 
         return(
             <div className="dropdown-div">
                 <DropDownButton label={label} handleDropDownClick={this.toggleDropDown}/>
                 { showDropDownItems
-                ? <DropDownItems options={options} handleOptionSelect={this.onSelectItem}/>
+                ? <DropDownItems options={options} canCreateOption={canCreateOption} maximumDisplayOptions={maximumDisplayOptions} handleOptionSelect={this.onSelectItem} addNewOption={this.props.addNewOption}/>
                 : ''
                 }   
             </div>
