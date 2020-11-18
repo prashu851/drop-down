@@ -66,6 +66,7 @@ class DropDownItems extends React.Component {
                         placeholder="Search…"
                         inputProps={{ 'aria-label': 'search' }}
                         onChange={this.handleFilter}
+                        className="search"
                     />                    
                 </div>
                 {this.renderOptions()}

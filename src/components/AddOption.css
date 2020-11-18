@@ -4,9 +4,9 @@
 .add-btn{
     float: right;
     height:2rem;
-    background-color: #2c497f;
-    color:white;
-    border:none;
+    background-color:white;
+    color: #6457a6;
+    border:2px solid  #6457a6;
     outline: none;
     border-radius: 5px;
     cursor: pointer;

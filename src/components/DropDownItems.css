@@ -23,19 +23,25 @@
     background-color: #d8def1;
     cursor: pointer;
 }
+.search-input .search{
+    color:  #6457a6;
+}
 .search-input:hover{
     background-color: white;
 }
 .search-icon{
     height:100%;
     padding-top: 2px;
+    color:  #6457a6;
 }
 .show-more-btn{
     width:100%;
     padding:10px 20px;
     border:none;
-    outline: none;
-    background-color: #5995ed;
-    color:white;
-    border-radius: 5px;
+    outline: blue;
+    background-color: #d8def1;
+    color: #6457a6;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
 }

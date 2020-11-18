@@ -45,7 +45,7 @@ class Cities extends React.Component {
                 label={isEmpty(selectedCity) ? "Select City": selectedCity }
                 options={cities}
                 onOptionChange={this.onCityChange}
-                maximumDisplayOptions={3}
+                maximumDisplayOptions={8}
                 addNewOption={this.addNewOption}
                 canCreateOption={false}
             />
