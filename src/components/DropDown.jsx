@@ -11,6 +11,7 @@ class DropDown extends React.Component {
         }
         this.toggleDropDown = this.toggleDropDown.bind(this);
         this.onSelectItem = this.onSelectItem.bind(this);
+        this.hideDropDownItems = this.hideDropDownItems.bind(this);
     }
     toggleDropDown = () => {
         this.setState({
@@ -18,11 +19,20 @@ class DropDown extends React.Component {
         });
     }
 
-    onSelectItem = (selectedItem) => {
+    hideDropDownItems = () => {
         this.setState({
             showDropDownItems: false
         });
+    }
+
+    onSelectItem = (selectedItem) => {
         this.props.onOptionChange(selectedItem);
+        this.hideDropDownItems();
+    }
+
+    addAndSelectOption = (option) => {
+        this.props.addNewOption(option);
+        this.hideDropDownItems();
     }
     render(){
         const { options, label, maximumDisplayOptions, canCreateOption } = this.props;
@@ -31,7 +41,7 @@ class DropDown extends React.Component {
             <div className="dropdown-div">
                 <DropDownButton label={label} handleDropDownClick={this.toggleDropDown}/>
                 { showDropDownItems
-                ? <DropDownItems options={options} canCreateOption={canCreateOption} maximumDisplayOptions={maximumDisplayOptions} handleOptionSelect={this.onSelectItem} addNewOption={this.props.addNewOption}/>
+                ? <DropDownItems options={options} canCreateOption={canCreateOption} maximumDisplayOptions={maximumDisplayOptions} handleOptionSelect={this.onSelectItem} addNewOption={this.addAndSelectOption}/>
                 : ''
                 }   
             </div>
